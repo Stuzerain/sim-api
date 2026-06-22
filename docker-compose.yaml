@@ -1,0 +1,10 @@
+services:
+
+  # adapted from the postgres docker image docs: https://github.com/docker-library/docs/blob/master/postgres/README.md
+  db:
+    image: postgres
+    restart: always
+    # set shared memory limit when using docker compose
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: local_pass
