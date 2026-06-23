@@ -90,7 +90,7 @@ curl localhost:3000/inventory
 ```
 
 ## Testing
-The elephant in the room...unit tests have not been written (yet?)! In an ideal world, of course they would be a requirement.
+The _other_ elephant (Get it? Because Postgres) in the room...unit tests have not been written (yet?)! In an ideal world, of course they would be a requirement.
 In this case, 90% of the logic of this service is interacting with an external DB, and testing that probably involves mocking
 responses. The bulk of tests would just be testing how mock responses are shaped, so that wasn't where the majority of effort went.
 A cost-benefit analysis did not look favorably upon it, especially since this isn't really supposed to be "enterprise".
