@@ -6,5 +6,9 @@ services:
     restart: always
     # set shared memory limit when using docker compose
     shm_size: 128mb
+    volumes:
+      - ./src/config/init-db:/docker-entrypoint-initdb.d
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_PASSWORD: local_pass
