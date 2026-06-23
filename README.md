@@ -113,3 +113,9 @@ professional life, and it would be borderline mandatory to set up some structure
 I also endeavored to write this in a pretty standard, procedural style. Is that how I would approach every problem? Of course not.
 When dealing with data, I've gotten a lot of utility out of FP-style libraries like [ramda](https://ramdajs.com/)
 and [crocks](https://crocks.dev/). I did use _a little_ currying, but I couldn't resist.
+- Why TypeScript? It's what I've used most and I generally like it okay. For the most part JS/TypeScript border on idiomatic,
+so it seemed a totally fine choice to make something that others would look at.
+- Why Postgres? Most people are going to reach for SQL first, it's open source (moral victory vs competitors!), and I like the
+elephant logo. The more interesting question might be "Why not NoSQL?" Since this use case is so simple, I thought about something
+like MongoDB, but ultimately I thought about how one could imagine this scaling, and at some point the concept of having a schema is
+appealing, even if it's not immediately useful for this little project. I'm just not fully convinced about NoSQL.
