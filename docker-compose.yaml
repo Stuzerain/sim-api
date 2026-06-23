@@ -1,4 +1,14 @@
 services:
+  api:
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      DB_USER: postgres
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_PASS: ${DB_PASS:-local_pass}
+
 
   # adapted from the postgres docker image docs: https://github.com/docker-library/docs/blob/master/postgres/README.md
   db:
@@ -11,4 +21,4 @@ services:
     ports:
       - 5432:5432
     environment:
-      POSTGRES_PASSWORD: local_pass
+      POSTGRES_PASSWORD: ${DB_PASS:-local_pass}
