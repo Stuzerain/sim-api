@@ -7,6 +7,10 @@ products available for sale, adjusting stock levels as new shipments arrive, and
 make purchases. Each distinct product is typically identified by a **SKU** (Stock Keeping Unit) — a unique identifier
 used to track and manage individual items across the supply chain.
 
+## Styling
+This project utilizes [gts](https://github.com/google/gts), Google's TypeScript style guide, linter, etc. There is really
+no need to reinvent the wheel there, and following a style guide as soon as possible is best for hygiene.
+
 ## Configuration
 If one has any desire to change ports, passwords, etc., that lives at `src/config/index` for the API and the DB password is set
 in the `docker-compose.yaml` file that lives at the root of this repo. There isn't too much config involved here, though.
@@ -105,6 +109,7 @@ Transactions would probably be a sensible thing to implement on top of just maki
 Also, the handling of errors within the DB communicating functions is almost definitely not exhaustive.
 - There's really no logging outside of a simple "API is ready" message. Observability is something that I worry about a lot in my
 professional life, and it would be borderline mandatory to set up some structured logging.
-- I opted to not use any libraries outside of a very standard HTTP server and a DB driver and to write this in a pretty standard,
-procedural style. Is that how I would approach every problem? Of course not. When dealing with data, I've gotten a lot of
-utility out of FP-style libraries like [ramda](https://ramdajs.com/) and [crocks](https://crocks.dev/).
+- I opted to not use any libraries outside of a very standard HTTP server, a DB driver, and a lib for a style guide + configs.
+I also endeavored to write this in a pretty standard, procedural style. Is that how I would approach every problem? Of course not.
+When dealing with data, I've gotten a lot of utility out of FP-style libraries like [ramda](https://ramdajs.com/)
+and [crocks](https://crocks.dev/). I did use _a little_ currying, but I couldn't resist.
