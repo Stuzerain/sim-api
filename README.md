@@ -102,6 +102,7 @@ Transactions would probably be a sensible thing to implement on top of just maki
 - Unit tests. This has already been called out, but having code without unit tests is a pretty good sign it's not really safe for use.
 - API hygiene like authorization, input validation, handling of invalid routes, etc. is a must.
 - The fact that the errors the API can return are just strings was determined by the spec, but one would typically expect more context.
+Also, the handling of errors within the DB communicating functions is almost definitely not exhaustive.
 - There's really no logging outside of a simple "API is ready" message. Observability is something that I worry about a lot in my
 professional life, and it would be borderline mandatory to set up some structured logging.
 - I opted to not use any libraries outside of a very standard HTTP server and a DB driver and to write this in a pretty standard,
